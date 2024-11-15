@@ -1,194 +1,63 @@
-/* style.css (example output from SCSS) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e68578;
-    color: #635555;
+    background: linear-gradient(to right, #f7f8fa, #e2ebf0);
+    color: #333;
 }
-
-img {
-    max-width: 60%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.responsive-image {
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 3px rgba(107, 78, 78, 0.1);
-}
-
 header {
-    background-color: #55470b;
-    color: rgb(0, 0, 0);
-    padding: 1rem;
     text-align: center;
-    font-weight: bold;
+    background: #004d61;
+    color: #fff;
+    padding: 2rem;
 }
-
+header nav.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
 header nav a {
-    color: rgb(189, 189, 189);
-    margin: 0 1rem;
     text-decoration: none;
-    font-weight: bold;
+    color: #f0f8ff;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
-
 header nav a:hover {
-    text-decoration: underline;
-    font-weight: bold;
+    background: #fff;
+    color: #004d61;
 }
-
+img.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem auto;
+}
 section {
-    margin: 5rem;
-    padding: 3rem;
-    background: #635d5d;
-    border-radius: 7px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    animation: fadeInUp 1s ease-in-out;
 }
-
-/* Apply bold styling to all headings */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold; /* Makes all headings bold */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-/* Optional: Customize individual heading levels */
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold; /* Explicitly bold */
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 1.75rem;
-    font-weight: bold;
-}
-
-Organization and Membership {
-    font-size: 1.75rem;
-    text-decoration: underline;
-    font-weight: bold; /* Explicitly bold */
-}
-
 footer {
     text-align: center;
+    background: #333;
+    color: #fff;
     padding: 1rem;
-    background: #1f0361;
-    color: white;
-}
-
-@keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  section {
-    opacity: 0; /* Start hidden */
-    animation: fadeInUp 1s ease forwards; /* Animation applied to sections */
-    margin: 2rem;
-    padding: 1rem;
-    background: #6d4646;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(43, 255, 1, 0.1);
-  }
-  
-  /* Optional: Delays to make each section appear sequentially */
-  #about {
-    animation-delay: 0.3s;
-  }
-  #experience {
-    animation-delay: 0.3s;
-  }
-  #education {
-    animation-delay: 0.3s;
-  }
-  #skills {
-    animation-delay: 0.3s;
-  }
-  #computerskills {
-    animation-delay: 0.5s;
-  }
-  #hobbies {
-    animation-delay: 1s;
-  }
-  #contact {
-    animation-delay: 1s;
-  }
-  
-  /* Standard HTML Headings */
-h1, h2, h3, h4, h5, h6,
-.heading-7, .heading-8, .heading-9, .heading-10, .heading-11 {
-    font-weight: bold;
-    margin: 1rem 0;
-}
-
-/* Specific sizes for each custom heading */
-h1, .heading-1 { font-size: 2.5rem; }
-h2, .heading-2 { font-size: 2.5rem; }
-h3, .heading-3 { font-size: 2rem; }
-h4, .heading-4 { font-size: 2rem; }
-h5, .heading-5 { font-size: 2rem; }
-h6, .heading-6 { font-size: 2rem; }
-.heading-7 { font-size: 2rem; }
-.heading-8 { font-size: 2rem; }
-.heading-9 { font-size: 2rem; }
-.heading-10 { font-size: 2rem; }
-.heading-11 { font-size: 2rem; }
-
-/* Keyframes for multicolor background animation */
-@keyframes multicolorBackground {
-    0% {
-        background-color: #5c9483; /* Start color */
-    }
-    25% {
-        background-color: #5b6275; /* Second color */
-    }
-    50% {
-        background-color: #7689df; /* Third color */
-    }
-    75% {
-        background-color: #62416e; /* Fourth color */
-    }
-    100% {
-        background-color: #4a3463; /* Back to start */
-    }
-}
-
-/* Apply the animation to the header */
-header {
-    animation: multicolorBackground 10s infinite; /* Infinite loop for background color change */
-    padding: 2rem;
-    color: rgb(95, 46, 46); /* Ensure text contrasts with the background */
-    text-align: center;
-    font-family: Arial, sans-serif;
-    transition: background-color 1s ease; /* Smooth transition between colors */
-}
-
-/* Optional: Add the animation to the entire body for a global effect */
-body {
-    animation: multicolorBackground 10s infinite;
-    color: #333; /* Text color */
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-/* Sections with multicolor animation */
-section {
-    padding: 2rem;
-    margin: 2rem auto;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
